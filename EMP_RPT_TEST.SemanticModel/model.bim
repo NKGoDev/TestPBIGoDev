@@ -12,7 +12,7 @@
       },
       {
         "name": "PBIDesktopVersion",
-        "value": "2.136.1478.0 (24.09)"
+        "value": "2.137.751.0 (24.10)"
       },
       {
         "name": "PBI_ProTooling",
@@ -77,6 +77,10 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
           }
         ],
         "columns": [
@@ -174,6 +178,32 @@
                 "relationship": "d420975d-4abf-4687-82a1-b70ab9aedcc1"
               }
             ]
+          },
+          {
+            "name": "FIPS_Char",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ea41e67d-a574-4b4d-b92f-359fa1eadb22",
+            "sourceColumn": "FIPS_Char",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "UserEmail",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a8e8de5f-a64f-41e8-8e53-57ee94ca6586",
+            "sourceColumn": "UserEmail",
+            "summarizeBy": "none"
           }
         ],
         "lineageTag": "a13b97bd-3731-4ff7-a9fb-674ab5cb43ba",
@@ -185,9 +215,10 @@
               "expression": [
                 "let",
                 "    Source = Sql.Database(\"copilotdev\\SQLEXPRESS\", \"Dev\"),",
-                "    dbo_Employees = Source{[Schema=\"dbo\",Item=\"Employees\"]}[Data]",
+                "    dbo_Employees = Source{[Schema=\"dbo\",Item=\"Employees\"]}[Data],",
+                "    #\"Filtered Rows\" = Table.SelectRows(dbo_Employees, each ([EmployeeName] = \"Disha\"))",
                 "in",
-                "    dbo_Employees"
+                "    #\"Filtered Rows\""
               ],
               "type": "m"
             }
