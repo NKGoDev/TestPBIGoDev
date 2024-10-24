@@ -1,0 +1,9 @@
+{
+  "version": "4.0",
+  "datasetReference": {
+    "byPath": {
+      "path": "../EMP_RPT_TEST.SemanticModel"
+    },
+    "byConnection": null
+  }
+}
