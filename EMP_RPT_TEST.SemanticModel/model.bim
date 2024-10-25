@@ -214,7 +214,7 @@
             "source": {
               "expression": [
                 "let",
-                "    Source = Sql.Database(\"copilotdev\\SQLEXPRESS\", \"Test\"),",
+                "    Source = Sql.Database(\"copilotdev\\sqlexpress\", \"test\"),",
                 "    dbo_Employees = Source{[Schema=\"dbo\",Item=\"Employees\"]}[Data],",
                 "    #\"Filtered Rows\" = Table.SelectRows(dbo_Employees, each ([EmployeeName] = \"Disha\"))",
                 "in",
