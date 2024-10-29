@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "EMP_RPT_TEST_Version"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "9705f622-ee1b-41e4-ad68-8fa5131283e0"
+  }
+}

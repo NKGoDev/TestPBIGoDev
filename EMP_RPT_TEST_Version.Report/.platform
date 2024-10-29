@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "EMP_RPT_TEST_Version"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "d6feea70-baf1-41fe-bec6-d7bc7c0e48e5"
+  }
+}
