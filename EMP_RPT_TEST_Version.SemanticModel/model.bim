@@ -77,6 +77,10 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
           }
         ],
         "columns": [
@@ -211,9 +215,10 @@
               "expression": [
                 "let",
                 "    Source = Sql.Database(\"copilotdev\\SQLEXPRESS\", \"Dev\"),",
-                "    dbo_Employees = Source{[Schema=\"dbo\",Item=\"Employees\"]}[Data]",
+                "    dbo_Employees = Source{[Schema=\"dbo\",Item=\"Employees\"]}[Data],",
+                "    #\"Filtered Rows\" = Table.SelectRows(dbo_Employees, each ([FIPS_Char] <> null))",
                 "in",
-                "    dbo_Employees"
+                "    #\"Filtered Rows\""
               ],
               "type": "m"
             }
