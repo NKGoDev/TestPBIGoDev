@@ -184,7 +184,7 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "2b8ed840-f0d9-4141-88a9-00bad592ba20",
+            "lineageTag": "c5b7a959-e839-47e4-a873-c7e3a6b49f3f",
             "sourceColumn": "FIPS_Char",
             "summarizeBy": "none"
           },
@@ -197,7 +197,7 @@
               }
             ],
             "dataType": "string",
-            "lineageTag": "f63089fd-40b2-41c7-a2c9-891ff722bbfa",
+            "lineageTag": "40577da9-5cdf-4e49-9ba8-cc028b1646b2",
             "sourceColumn": "UserEmail",
             "summarizeBy": "none"
           }
