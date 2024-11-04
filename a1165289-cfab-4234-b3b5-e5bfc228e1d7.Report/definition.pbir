@@ -1,0 +1,9 @@
+{
+  "version": "4.0",
+  "datasetReference": {
+    "byPath": {
+      "path": "../3c929d17-f80b-441d-8946-ac4117825ccb.SemanticModel"
+    },
+    "byConnection": null
+  }
+}
