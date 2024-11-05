@@ -13,6 +13,10 @@
       {
         "name": "PBIDesktopVersion",
         "value": "2.137.1102.0 (24.10)"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
       }
     ],
     "culture": "en-US",
@@ -152,19 +156,6 @@
                 "relationship": "d420975d-4abf-4687-82a1-b70ab9aedcc1"
               }
             ]
-          },
-          {
-            "name": "TempColumn",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "891e858d-5fc1-44f1-9c99-8dedff1434ff",
-            "sourceColumn": "TempColumn",
-            "summarizeBy": "none"
           }
         ],
         "lineageTag": "a13b97bd-3731-4ff7-a9fb-674ab5cb43ba",
@@ -179,10 +170,9 @@
                 "    dbo_Employees = Source{[Schema=\"dbo\",Item=\"Employees\"]}[Data],",
                 "    #\"Removed Columns\" = Table.RemoveColumns(dbo_Employees,{\"FIPS_Char\", \"UserEmail\"}),",
                 "    #\"Added Custom\" = Table.AddColumn(#\"Removed Columns\", \"TempColumn\", each [EmployeeName]+\" & \"[DepartmentName][DepartmentName]),",
-                "    #\"Removed Columns1\" = Table.RemoveColumns(#\"Added Custom\",{\"TempColumn\"}),",
-                "    #\"Added Custom1\" = Table.AddColumn(#\"Removed Columns1\", \"TempColumn\", each \"Name - \" & [EmployeeName])",
+                "    #\"Removed Columns1\" = Table.RemoveColumns(#\"Added Custom\",{\"TempColumn\"})",
                 "in",
-                "    #\"Added Custom1\""
+                "    #\"Removed Columns1\""
               ],
               "type": "m"
             }
