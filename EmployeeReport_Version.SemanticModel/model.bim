@@ -51,6 +51,10 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
           }
         ],
         "columns": [
@@ -148,6 +152,19 @@
                 "relationship": "d420975d-4abf-4687-82a1-b70ab9aedcc1"
               }
             ]
+          },
+          {
+            "name": "TempColumn",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "891e858d-5fc1-44f1-9c99-8dedff1434ff",
+            "sourceColumn": "TempColumn",
+            "summarizeBy": "none"
           }
         ],
         "lineageTag": "a13b97bd-3731-4ff7-a9fb-674ab5cb43ba",
@@ -159,9 +176,13 @@
               "expression": [
                 "let",
                 "    Source = Sql.Database(\"copilotdev\\SQLEXPRESS\", \"Dev\"),",
-                "    dbo_Employees = Source{[Schema=\"dbo\",Item=\"Employees\"]}[Data]",
+                "    dbo_Employees = Source{[Schema=\"dbo\",Item=\"Employees\"]}[Data],",
+                "    #\"Removed Columns\" = Table.RemoveColumns(dbo_Employees,{\"FIPS_Char\", \"UserEmail\"}),",
+                "    #\"Added Custom\" = Table.AddColumn(#\"Removed Columns\", \"TempColumn\", each [EmployeeName]+\" & \"[DepartmentName][DepartmentName]),",
+                "    #\"Removed Columns1\" = Table.RemoveColumns(#\"Added Custom\",{\"TempColumn\"}),",
+                "    #\"Added Custom1\" = Table.AddColumn(#\"Removed Columns1\", \"TempColumn\", each \"Name - \" & [EmployeeName])",
                 "in",
-                "    dbo_Employees"
+                "    #\"Added Custom1\""
               ],
               "type": "m"
             }
