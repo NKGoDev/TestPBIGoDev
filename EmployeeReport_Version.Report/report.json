@@ -36,33 +36,6 @@
           "z": 2000.00
         },
         {
-          "config": "{\"name\":\"a2068f73169a50c9a104\",\"layouts\":[{\"id\":0,\"position\":{\"x\":498,\"y\":290,\"width\":742,\"height\":280,\"z\":3001,\"tabOrder\":3001}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Y\":[{\"queryRef\":\"CountNonNull(Employees.EmployeeID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"e\",\"Entity\":\"Employees\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"EmployeeID\"}},\"Function\":5},\"Name\":\"CountNonNull(Employees.EmployeeID)\",\"NativeReferenceName\":\"Count of EmployeeID\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"EmployeeID\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
-          "filters": "[]",
-          "height": 280.00,
-          "width": 742.00,
-          "x": 498.00,
-          "y": 290.00,
-          "z": 3001.00
-        },
-        {
-          "config": "{\"name\":\"aa9f19a33adab5dad56c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10,\"y\":570,\"width\":408,\"height\":150,\"z\":3000,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Min(Employees.Country)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"e\",\"Entity\":\"Employees\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Country\"}},\"Function\":3},\"Name\":\"Min(Employees.Country)\",\"NativeReferenceName\":\"First Country\"}]},\"drillFilterOtherVisuals\":true}}",
-          "filters": "[]",
-          "height": 150.00,
-          "width": 408.00,
-          "x": 10.00,
-          "y": 570.00,
-          "z": 3000.00
-        },
-        {
-          "config": "{\"name\":\"aee0dc444e0e2b4a3bc3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10,\"y\":290,\"width\":408,\"height\":280,\"z\":1000,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Min(Employees.DepartmentName)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"e\",\"Entity\":\"Employees\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"DepartmentName\"}},\"Function\":3},\"Name\":\"Min(Employees.DepartmentName)\",\"NativeReferenceName\":\"First DepartmentName\"}]},\"drillFilterOtherVisuals\":true}}",
-          "filters": "[]",
-          "height": 280.00,
-          "width": 408.00,
-          "x": 10.00,
-          "y": 290.00,
-          "z": 1000.00
-        },
-        {
           "config": "{\"name\":\"e9db59b35b67a32316a4\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10,\"y\":0,\"z\":0,\"width\":408,\"height\":280,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"Employees.EmployeeName\",\"active\":true},{\"queryRef\":\"Employees.Skills\"}],\"Columns\":[{\"queryRef\":\"Employees.Country\",\"active\":true}],\"Values\":[{\"queryRef\":\"CountNonNull(Employees.EmployeeID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"e\",\"Entity\":\"Employees\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"EmployeeName\"},\"Name\":\"Employees.EmployeeName\",\"NativeReferenceName\":\"EmployeeName\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Skills\"},\"Name\":\"Employees.Skills\",\"NativeReferenceName\":\"Skills\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Country\"},\"Name\":\"Employees.Country\",\"NativeReferenceName\":\"Country\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"EmployeeID\"}},\"Function\":5},\"Name\":\"CountNonNull(Employees.EmployeeID)\",\"NativeReferenceName\":\"Count of EmployeeID\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"values\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"15D\"}}}}}]}}}",
           "filters": "[]",
           "height": 280.00,
